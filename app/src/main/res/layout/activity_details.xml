@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailsActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/primarycolor"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/toolbar">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/iicontent"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                
+                <ImageView
+                    android:id="@+id/iiimage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/ic_profile"
+                    android:scaleType="centerCrop"
+                    android:padding="5dp"/>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtbookname"
+                        android:text="Name of the book"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Autharname"
+                        android:layout_below="@id/txtbookname"
+                        android:text="Name of the Aouther"
+                        android:padding="8dp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtbookprice"
+                        android:layout_below="@id/Autharname"
+                        android:text="Rs. 299"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#357a38"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/iicontent">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/abotThwbookstatic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:padding="6dp"
+                    android:text="About The Book"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtbookdec"
+                    android:layout_below="@id/abotThwbookstatic"
+                    android:layout_marginTop="10dp"
+                    android:padding="6dp"
+                    android:text="Hello"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/addtofavbtn"
+    android:layout_alignParentBottom="true"
+    android:background="@color/primarycolor"
+    android:text="Add to Favourites"
+    android:textSize="19sp"
+    android:textStyle="bold"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/progressbarlayout"
+    android:background="#ffffff">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressbar"/>
+</RelativeLayout>
+
+</RelativeLayout>
